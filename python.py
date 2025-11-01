@@ -24,6 +24,15 @@ for record in students:
     else:
         record["grade"] = "F"
 
+students.sort(key=lambda x: x["average"], reverse=True)
+
+# Display sorted list
+print(" Students sorted by average marks:")
+for s in students:
+
+    print(f"{s['name']}: Average = {s['average']}, Grade = {s['grade']}")
+print("-" * 50)
+
 # Search by student name
 while True:
     name = input("\nEnter student name:").strip()
